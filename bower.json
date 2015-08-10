@@ -1,0 +1,10 @@
+{
+  "name": "gulp-frontend",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.3"
+  }
+}

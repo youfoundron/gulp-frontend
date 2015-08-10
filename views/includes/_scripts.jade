@@ -1,0 +1,16 @@
+script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+script(src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js')
+
+
+if env === 'development'
+  script(src="#{cdn}javascripts/_app.js")
+else
+  script(src="#{cdn}javascripts/_app.min.js")
+
+
+//- inject things with include
+yield
+
+script
+  | var ga_account = "#{google_analytics}";
+  include:js scripts/ga.js

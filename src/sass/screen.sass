@@ -1,0 +1,62 @@
+@charset "UTF-8"
+
+// :: Setup
+// ------------------------------------------------------------
+@import bourbon
+@import neat
+
+
+// :: Vars
+// ------------------------------------------------------------
+
+$cdn: "../"
+
+$black: black
+$white: white
+
+
+// :: Include helper libs if ya need 'em
+// ------------------------------------------------------------
+//@import lib/animate
+//@import lib/blockgrid
+@import lib/typography
+@import lib/helpers
+
+
+// :: Globals
+// ------------------------------------------------------------
+
+body
+  // add cdn to images, ie; background-image: url("#{$cdn}images/bg.jpg")
+
+a:link, a:visited
+  color: $black
+  text-decoration: none
+  +transition(0.3s)
+  &:hover
+    color: $white
+
+ul
+  list-style: none
+
+
+// :: Blocks
+// ------------------------------------------------------------
+
+.container
+  +outer-container()
+  max-width: em(1140)
+
+
+// :: Basic Media Queries
+// http://thoughtbot.github.io/neat-docs/latest/#media
+// ------------------------------------------------------------
+
++media(min-width em(320) max-width em(800))
+  .container
+    width: 95%
+    font-size: 0.75em
+
++media(min-width em(1240))
+  .container
+    max-width: em(980)

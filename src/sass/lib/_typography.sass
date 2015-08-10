@@ -1,0 +1,52 @@
+// :: Global
+// ------------------------------------------------------------
+
+html
+  font-weight: 300
+  font-style: normal
+
+// :: Load Fonts
+// ------------------------------------------------------------
+
+// Icon Fonts
+
+// @include font-face(SSSocial, 'fonts/symbolset/social/ss-social-regular')
+@include font-face(SSSocialCircle, 'fonts/symbolset/social/ss-social-circle')
+@include font-face(SSStandard, 'fonts/symbolset/standard/ss-standard')
+
+$reg-stack: "Helvetica", sans-serif
+$alt-stack: "Helvetica", "Arial"
+$social-stack: "SSSocialCircle"
+$icon-stack: "SSStandard"
+
+
+// :: Icons
+// ------------------------------------------------------------
+
+.ss-social
+  font-family: $social-stack
+
+.ss-icon
+  font-family: $icon-stack
+
+[data-icon]:before
+  content: attr(data-icon)
+  text-transform: none
+  font-weight: normal
+  font-variant: normal
+  font-family: 'Icons'
+  line-height: 1
+  speak: none
+  -webkit-font-smoothing: antialiased
+
+
+// :: Selection
+// ------------------------------------------------------------
+
+::selection
+  background: $black
+  color: $white
+
+::-moz-selection
+  background: $black
+  color: $white
