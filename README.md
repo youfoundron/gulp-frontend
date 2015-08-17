@@ -18,5 +18,3 @@ Clean out the **dist** folder with ```gulp clean```
 To just build run ```gulp build```  
 
 Optionally you may pass a production flag with ```gulp build --production``` to minify scripts
-
-### Happy building!
