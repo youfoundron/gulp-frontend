@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: SSSocialCircle;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/symbolset/social/ss-social-circle.eot?#iefix") format("embedded-opentype"), url("fonts/symbolset/social/ss-social-circle.woff2") format("woff2"), url("fonts/symbolset/social/ss-social-circle.woff") format("woff"), url("fonts/symbolset/social/ss-social-circle.ttf") format("truetype"), url("fonts/symbolset/social/ss-social-circle.svg#SSSocialCircle") format("svg"); }
+
+@font-face {
+  font-family: SSStandard;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/symbolset/standard/ss-standard.eot?#iefix") format("embedded-opentype"), url("fonts/symbolset/standard/ss-standard.woff2") format("woff2"), url("fonts/symbolset/standard/ss-standard.woff") format("woff"), url("fonts/symbolset/standard/ss-standard.ttf") format("truetype"), url("fonts/symbolset/standard/ss-standard.svg#SSStandard") format("svg"); }
+
+.ss-social {
+  font-family: "SSSocialCircle"; }
+
+.ss-icon {
+  font-family: "SSStandard"; }
+
+[data-icon]:before {
+  content: attr(data-icon);
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-family: 'Icons';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased; }
+
+::selection {
+  background: black;
+  color: white; }
+
+::-moz-selection {
+  background: black;
+  color: white; }
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0; }
+
+.is-hidden {
+  display: none; }
+
+.is-shown, .is-block {
+  display: block; }
+
+.is-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.is-lowercase {
+  text-transform: lowercase; }
+
+.hide {
+  display: none; }
+
+.flex-video {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 57.25%;
+  height: 100%;
+  margin-bottom: 1em;
+  overflow: hidden; }
+  .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+body {
+  font-family: "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%; }
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s; }
+  a:link:hover, a:visited:hover {
+    color: white; }
+
+ul {
+  list-style: none; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 71.25em; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black; }
+  .preloader .card {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 1em 3em;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .preloader .card.active {
+      display: block; }
+
+@media screen and (min-width: 20em) and (max-width: 50em) {
+  .container {
+    width: 95%;
+    font-size: 0.75em; } }
+
+@media screen and (min-width: 77.5em) {
+  .container {
+    max-width: 61.25em; } }

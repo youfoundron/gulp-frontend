@@ -1,6 +1,14 @@
 script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
 script(src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js')
 
+script(src="#{cdn}libs/three.js")
+script(src="#{cdn}libs/physi.js")
+script(src="#{cdn}libs/Wagner.js")
+script(src="#{cdn}libs/Wagner.base.js")
+script(src="#{cdn}build/whitestorm.js")
+script(src="#{cdn}plugins/whs.wagner.js")
+script(src="#{cdn}plugins/whs.preload.js")
+
 
 if env === 'development'
   script(src="#{cdn}javascripts/_app.js")

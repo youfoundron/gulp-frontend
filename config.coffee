@@ -4,7 +4,7 @@ module.exports = ->
   name: 'App Name'
 
   hosturl: 'http://localhost:5000'
-  cdn: './'
+  cdn: '../'
   version: '?v=0'
   env: 'development'
 

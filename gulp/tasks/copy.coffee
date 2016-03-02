@@ -13,9 +13,23 @@ module.exports = (gulp, gutil, config) ->
     .pipe changed(dest)
     .pipe gulp.dest(dest)
 
+  gulp.task 'copy-3D', ->
+    changed    = require "gulp-changed"
+    handleErrors  = require "#{global.__gulp}/util/handleErrors"
+
+    paths     = config.get 'paths'
+
+    src = "#{paths.src._3D}/**/*"
+    dest = paths.dist.root
+
+    gulp.src src
+    .pipe changed(dest)
+    .pipe gulp.dest(dest)
+
+
   # gulp.task 'copy-audio'
 
   # gulp.task 'copy-video'
 
   # copy all assets in copy task
-  gulp.task 'copy', [ 'copy-fonts' ]
+  gulp.task 'copy', [ 'copy-fonts', 'copy-3D' ]

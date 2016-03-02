@@ -10,6 +10,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
+    "three": "^0.74.0",
     "webpack": "^1.11.0",
     "when": "^3.7.3"
   },

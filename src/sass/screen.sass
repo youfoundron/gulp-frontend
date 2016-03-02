@@ -28,6 +28,9 @@ $white: white
 
 body
   // add cdn to images, ie; background-image: url("#{$cdn}images/bg.jpg")
+  font-family: $reg-stack
+  width: 100%
+  height: 100%
 
 a:link, a:visited
   color: $black
@@ -46,6 +49,24 @@ ul
 .container
   +outer-container()
   max-width: em(1140)
+
+.preloader
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background: $black
+  .card
+    display: none
+    position: absolute
+    background: $white
+    padding: 1em 3em
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    &.active
+      display: block
 
 
 // :: Basic Media Queries

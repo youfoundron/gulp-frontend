@@ -2,10 +2,15 @@ module.exports = (config) ->
   paths = config.get "paths"
   app_config = config.get "app"
 
+  # shim libs that aren't in commonJS, require, or AMD format
+  shims:
+    threejs: "THREE"
+
   # always load this lib to anything that wants it
   exposeGlobals:
     "$": "jquery"
     "_": "lodash"
+    "THREE": "threejs"
 
   bundles: [
     {
@@ -13,7 +18,7 @@ module.exports = (config) ->
       dest: "_app.js"
 
       # http://webpack.github.io/docs/configuration.html#externals
-      externals: [jquery:"jQuery", lodash:"_"]
+      externals: [jquery:"jQuery", lodash:"_", threejs:"THREE"]
 
       # JSON.stringify because strings don't get escaped
       vars:

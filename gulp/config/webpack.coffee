@@ -144,6 +144,7 @@ module.exports = (config) ->
 		#enable dev debugging
 		if not isProduction
 			enableDebugging(config)
+		enableDebugging(config)
 
 		#insert the entry
 		insertEntry(config, entry.src)

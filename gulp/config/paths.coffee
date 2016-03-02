@@ -18,6 +18,7 @@ module.exports = ->
     root: src
     coffee: _path.normalize "#{src}/coffeescripts"
     js: _path.normalize "#{src}/javascripts"
+    _3D: _path.normalize "#{src}/3D"
     css: _path.normalize "#{src}/css"
     sass: _path.normalize "#{src}/sass"
     fonts: _path.normalize "#{src}/fonts"
