@@ -10,6 +10,16 @@ Use ```npm install -g bower``` if bower is not already installed
   
 Work on files in the **src** folder, compiled code goes to a folder named **dist**
 
+```
+git clone https://github.com/rongierlach/gulp-frontend.git
+cd gulp-frontend/
+npm install -g gulp
+npm install -g bower
+npm install
+bower install
+gulp
+```
+
 ## Running Gulp
 Run ```gulp``` to get working  
 
