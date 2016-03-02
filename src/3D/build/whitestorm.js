@@ -2910,7 +2910,7 @@ WHS.init = function() {
        object.ready.on("ready", function() {
           // object._state.then(() => {
                scope._ready.push(object);
-                 if(loading_queue._queue.length == scope._ready.length)
+                 if(loading_queue._queue.length == scope._ready.length) 
                    scope._events.emit("ready");
            //});
        });
