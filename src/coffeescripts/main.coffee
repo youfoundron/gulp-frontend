@@ -20,9 +20,9 @@ GAME = new WHS.init
 	# gravity: points 0, -100, 0
 	camera:
 		far: 10000
-		x: 150
+		x: 300
 		y: 20
-		z: 150
+		z: 300
 	# rWidth: 1 / 1.5
 	# rHeight: 1 / 1.5
 	stats: "fps" # fps, ms, mb
@@ -46,28 +46,26 @@ GAME.skybox = GAME.Skybox
 
 ## TERRAIN
 ## ###############################
-# terrainMap = new Image()
-# terrainMap.src = './assets/terrain/default_terrain.png'
-# terrainMap = require('./assets/terrain/export_default_terrain.js')()
-# console.log terrainMap
-# GAME.ground = GAME.Terrain
-# 	geometry:
-# 		map: terrainMap
-# 		depth: 100
-# 		width: 256
-# 		height: 256
-# 	material:
-# 		color: 0xff0000
-# 		side: THREE.DoubleSide
-# 		kind: "basic"
-# 	pos: points 0, 0, 0
+terrainMap = new Image()
+terrainMap.src = './assets/terrain/default_terrain.png'
+GAME.ground = GAME.Terrain
+	geometry:
+		map: terrainMap
+		depth: 100
+		width: 256
+		height: 256
+	material:
+		color: 0xff0000
+		side: THREE.DoubleSide
+		kind: "basic"
+	pos: points 0, -50, 0
 
 
 ## MODELS
 ## ###############################
-GAME.flamingo = GAME.Model
+GAME.horse = GAME.Model
 	geometry:
-		path: 'assets/models/morph/flamingo.js'
+		path: 'assets/models/morph/horse.js'
 		mass: 30
 		onlyvis: false
 	material:
@@ -92,60 +90,44 @@ GAME.spotlight_white = GAME.SpotLight
 		distance: 1000
 	pos: points 160, 120, 160
 	target: points 0, 10, 0
-GAME.spotlight_cool = GAME.SpotLight
-	light:
-		color: 0x003366
-		intensity: 1.5
-		distance: 1000
-	pos: points 160, 200, 160
-	target: points 0, 0, 0
-GAME.spotlight_warm = GAME.SpotLight
-	light:
-		color: 0x8b0000
-		intensity: 1
-		distance: 1000
-	pos: points 100, 120, 160
-	target: points 0, 0, 0
 
 
 ## SUNSET LIGHTING
 ## ###############################
-# https://github.com/WhitestormJS/whitestorm.js/issues/54
-# GAME.ambient_light = GAME.AmbientLight
-# 	light:
-# 		color: 0x080808
-# # GAME.blue_light = GAME.DirectionalLight
-# 	light:
-# 		color: 0x003366 # midnightblue
-# 		intensity: 1
-# 	pos: points 5, 1, 0
-# GAME.red_light = GAME.DirectionalLight
-# 	light:
-# 		color: 0x8b0000 # darkred
-# 		intensity: 1.5
+GAME.ambient_light = GAME.AmbientLight
+	light:
+		color: 0x080808
+GAME.blue_light = GAME.DirectionalLight
+	light:
+		color: 0x003366 # midnightblue
+		intensity: 1
+	pos: points 5, 1, 0
+GAME.red_light = GAME.DirectionalLight
+	light:
+		color: 0x8b0000 # darkred
+		intensity: 1.5
 
 
 ## 3-POINT LIGHTING
 ## ###############################
-# https://github.com/WhitestormJS/whitestorm.js/issues/54
-# GAME.ambient_light = GAME.AmbientLight
-# 	light:
-# 		color: 0x101010
-# GAME.back_light = GAME.DirectionalLight
-# 	light:
-# 		color: 0xffffff
-# 		intensity: 0.225
-# 	pos: points 2.6, 1, 3
-# GAME.key_light = GAME.DirectionalLight
-# 	light:
-# 		color: 0xffffff
-# 		intensity: 0.375
-# 	pos: points -2, -1, 0
-# GAME.fill_light = GAME.DirectionalLight
-# 	light:
-# 		color: 0xffffff
-# 		intensity: 0.75
-# 	pos: points -3, -3, 2
+GAME.ambient_light = GAME.AmbientLight
+	light:
+		color: 0x101010
+GAME.back_light = GAME.DirectionalLight
+	light:
+		color: 0xffffff
+		intensity: 0.225
+	pos: points 2.6, 1, 3
+GAME.key_light = GAME.DirectionalLight
+	light:
+		color: 0xffffff
+		intensity: 0.375
+	pos: points -2, -1, 0
+GAME.fill_light = GAME.DirectionalLight
+	light:
+		color: 0xffffff
+		intensity: 0.75
+	pos: points -3, -3, 2
 
 
 ## POST EFFECTS
